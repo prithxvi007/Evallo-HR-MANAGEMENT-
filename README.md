@@ -34,128 +34,134 @@ Access the application
 Open http://localhost:3000
 
 🏗️ Project Architecture
-Folder Structure
-text
+
 Evallo-hrms-assessment/
-app
-├── api
-│  ├── assignments
-│  │  └── route.js
-│  ├── auth
-│  │  ├── login
-│  │  │  └── route.js
-│  │  ├── logout
-│  │  │  └── route.js
-│  │  └── register
-│  │     └── route.js
-│  ├── employees
-│  │  ├── [id]
-│  │  │  └── route.js
-│  │  └── route.js
-│  ├── logs
-│  │  └── route.js
-│  └── teams
-│     ├── [id]
-│     │  └── route.js
-│     └── route.js
-├── globals.css
-├── layout.jsx
-└── page.jsx
-components
-├── modals
-│  ├── confirmation-modal.jsx
-│  ├── employee-modal.jsx
-│  └── team-modal.jsx
-├── pages
-│  ├── assignments.jsx
-│  ├── dashboard.jsx
-│  ├── employee-list.jsx
-│  ├── login.jsx
-│  ├── signup.jsx
-│  └── team-list.jsx
-├── ui
-│  ├── accordion.tsx
-│  ├── alert-dialog.tsx
-│  ├── alert.tsx
-│  ├── aspect-ratio.tsx
-│  ├── avatar.tsx
-│  ├── badge.tsx
-│  ├── breadcrumb.tsx
-│  ├── button-group.tsx
-│  ├── button.tsx
-│  ├── calendar.tsx
-│  ├── card.tsx
-│  ├── carousel.tsx
-│  ├── chart.tsx
-│  ├── checkbox.tsx
-│  ├── collapsible.tsx
-│  ├── command.tsx
-│  ├── context-menu.tsx
-│  ├── dialog.tsx
-│  ├── drawer.tsx
-│  ├── dropdown-menu.tsx
-│  ├── empty.tsx
-│  ├── field.tsx
-│  ├── form.tsx
-│  ├── hover-card.tsx
-│  ├── input-group.tsx
-│  ├── input-otp.tsx
-│  ├── input.tsx
-│  ├── item.tsx
-│  ├── kbd.tsx
-│  ├── label.tsx
-│  ├── menubar.tsx
-│  ├── navigation-menu.tsx
-│  ├── pagination.tsx
-│  ├── popover.tsx
-│  ├── progress.tsx
-│  ├── radio-group.tsx
-│  ├── resizable.tsx
-│  ├── scroll-area.tsx
-│  ├── select.tsx
-│  ├── separator.tsx
-│  ├── sheet.tsx
-│  ├── sidebar.tsx
-│  ├── skeleton.tsx
-│  ├── slider.tsx
-│  ├── sonner.tsx
-│  ├── spinner.tsx
-│  ├── switch.tsx
-│  ├── table.tsx
-│  ├── tabs.tsx
-│  ├── textarea.tsx
-│  ├── toast.tsx
-│  ├── toaster.tsx
-│  ├── toggle-group.tsx
-│  ├── toggle.tsx
-│  ├── tooltip.tsx
-│  ├── use-mobile.tsx
-│  └── use-toast.ts
-├── navigation.jsx
-└── theme-provider.tsx
-hooks
-├── use-mobile.ts
-└── use-toast.ts
-lib
-├── models
-│  ├── AuditLog.js
-│  ├── Employee.js
-│  ├── index.js
-│  ├── Organization.js
-│  ├── Team.js
-│  └── User.js
-├── util
-│  └── utils.js
-├── auth.js
-├── dbConnect.js
-├── mock-data.js
-└── utils.ts
-public
-├── placeholder-logo.png
-├── placeholder-logo.svg
-├── placeholder-user.jpg
-├── placeholder.jpg
-└── placeholder.svg
+├── app/
+│   ├── api/
+│   │   ├── assignments/
+│   │   │   └── route.js
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   │   └── route.js
+│   │   │   ├── logout/
+│   │   │   │   └── route.js
+│   │   │   └── register/
+│   │   │       └── route.js
+│   │   ├── employees/
+│   │   │   ├── [id]/
+│   │   │   │   └── route.js
+│   │   │   └── route.js
+│   │   ├── logs/
+│   │   │   └── route.js
+│   │   └── teams/
+│   │       ├── [id]/
+│   │       │   └── route.js
+│   │       └── route.js
+│   ├── globals.css
+│   ├── layout.jsx
+│   └── page.jsx
+├── components/
+│   ├── modals/
+│   │   ├── confirmation-modal.jsx
+│   │   ├── employee-modal.jsx
+│   │   └── team-modal.jsx
+│   ├── pages/
+│   │   ├── assignments.jsx
+│   │   ├── dashboard.jsx
+│   │   ├── employee-list.jsx
+│   │   ├── login.jsx
+│   │   ├── signup.jsx
+│   │   └── team-list.jsx
+│   ├── ui/
+│   │   ├── accordion.tsx
+│   │   ├── alert-dialog.tsx
+│   │   ├── alert.tsx
+│   │   ├── aspect-ratio.tsx
+│   │   ├── avatar.tsx
+│   │   ├── badge.tsx
+│   │   ├── breadcrumb.tsx
+│   │   ├── button-group.tsx
+│   │   ├── button.tsx
+│   │   ├── calendar.tsx
+│   │   ├── card.tsx
+│   │   ├── carousel.tsx
+│   │   ├── chart.tsx
+│   │   ├── checkbox.tsx
+│   │   ├── collapsible.tsx
+│   │   ├── command.tsx
+│   │   ├── context-menu.tsx
+│   │   ├── dialog.tsx
+│   │   ├── drawer.tsx
+│   │   ├── dropdown-menu.tsx
+│   │   ├── empty.tsx
+│   │   ├── field.tsx
+│   │   ├── form.tsx
+│   │   ├── hover-card.tsx
+│   │   ├── input-group.tsx
+│   │   ├── input-otp.tsx
+│   │   ├── input.tsx
+│   │   ├── item.tsx
+│   │   ├── kbd.tsx
+│   │   ├── label.tsx
+│   │   ├── menubar.tsx
+│   │   ├── navigation-menu.tsx
+│   │   ├── pagination.tsx
+│   │   ├── popover.tsx
+│   │   ├── progress.tsx
+│   │   ├── radio-group.tsx
+│   │   ├── resizable.tsx
+│   │   ├── scroll-area.tsx
+│   │   ├── select.tsx
+│   │   ├── separator.tsx
+│   │   ├── sheet.tsx
+│   │   ├── sidebar.tsx
+│   │   ├── skeleton.tsx
+│   │   ├── slider.tsx
+│   │   ├── sonner.tsx
+│   │   ├── spinner.tsx
+│   │   ├── switch.tsx
+│   │   ├── table.tsx
+│   │   ├── tabs.tsx
+│   │   ├── textarea.tsx
+│   │   ├── toast.tsx
+│   │   ├── toaster.tsx
+│   │   ├── toggle-group.tsx
+│   │   ├── toggle.tsx
+│   │   ├── tooltip.tsx
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.tsx
+│   ├── navigation.jsx
+│   └── theme-provider.tsx
+├── hooks/
+│   ├── use-mobile.ts
+│   └── use-toast.ts
+├── lib/
+│   ├── models/
+│   │   ├── AuditLog.js
+│   │   ├── Employee.js
+│   │   ├── index.js
+│   │   ├── Organization.js
+│   │   ├── Team.js
+│   │   └── User.js
+│   ├── util/
+│   │   └── utils.js
+│   ├── auth.js
+│   ├── dbConnect.js
+│   ├── mock-data.js
+│   └── utils.ts
+├── public/
+│   ├── placeholder-logo.png
+│   ├── placeholder-logo.svg
+│   ├── placeholder-user.jpg
+│   ├── placeholder.jpg
+│   └── placeholder.svg
+├── package.json
+├── package-lock.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+└── README.md
 
 🗄️ Database Schema Design
 MongoDB Collections & Relationships
