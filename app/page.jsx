@@ -118,7 +118,7 @@ export default function Home() {
         setCurrentPage={setCurrentPage}
         onLogout={handleLogout}
       />
-      <main className="fade-in pt-16 pb-20 md:pb-0">{renderPage()}</main>
+      <main className="fade-in pt-24 pb-20 md:pb-0">{renderPage()}</main>
     </div>
   );
 }

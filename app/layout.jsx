@@ -21,28 +21,33 @@ export default function RootLayout({ children }) {
           <Toaster
             position="top-right"
             toastOptions={{
-              duration: 2000,
+              duration: 1500,
               style: {
-                background: "hsl(var(--muted))",
-                color: "hsl(var(--muted-foreground))",
-                borderRadius: "6px",
-                padding: "12px 14px",
+                background: "hsl(var(--background) / 0.55)",
+                marginTop: "60px",
+                marginRight: "40px",
+                color: "hsl(var(--foreground))",
+                backdropFilter: "blur(18px) saturate(160%)",
+                WebkitBackdropFilter: "blur(18px) saturate(160%)",
+                border: "1px solid hsl(var(--border) / 0.35)",
+                borderRadius: "14px",
+                padding: "10px 14px",
                 fontSize: "14px",
-                border: "none",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
+                boxShadow: "0 0 18px rgba(0,0,0,0.06)",
+                animation: "fadeSlide 0.22s ease-out",
               },
-
               success: {
                 style: {
-                  background: "hsl(var(--primary))",
+                  background: "hsl(var(--primary) / 0.85)",
                   color: "hsl(var(--primary-foreground))",
+                  border: "1px solid hsl(var(--primary) / 0.45)",
                 },
               },
-
               error: {
                 style: {
-                  background: "hsl(var(--destructive))",
+                  background: "hsl(var(--destructive) / 0.85)",
                   color: "hsl(var(--destructive-foreground))",
+                  border: "1px solid hsl(var(--destructive) / 0.45)",
                 },
               },
             }}
