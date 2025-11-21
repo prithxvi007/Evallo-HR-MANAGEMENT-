@@ -39,7 +39,7 @@
     "**/*.jsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "postcss.config.mjs",
+    "postcss.config.js",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts"
   ],
