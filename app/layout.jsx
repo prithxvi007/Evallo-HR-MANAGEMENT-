@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
               style: {
                 background: "hsl(var(--background) / 0.55)",
                 marginTop: "60px",
-                marginRight: "40px",
+                marginRight: "10px",
                 color: "hsl(var(--foreground))",
                 backdropFilter: "blur(18px) saturate(160%)",
                 WebkitBackdropFilter: "blur(18px) saturate(160%)",
